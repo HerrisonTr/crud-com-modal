@@ -6,7 +6,8 @@
 -- Tempo de geração: 21-Nov-2021 às 21:37
 -- Versão do servidor: 10.4.21-MariaDB
 -- versão do PHP: 8.0.12
-
+CREATE SCHEMA crud2;
+use crud2;
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
 SET time_zone = "+00:00";
