@@ -88,12 +88,6 @@ include '../config/conexao.php';
                 <li class="nav-item" role="presentation">
                     <a class="nav-link active" id="home-tab" data-bs-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Home</a>
                 </li>
-                <li class="nav-item" role="presentation">
-                    <a class="nav-link" id="profile-tab" data-bs-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Profile</a>
-                </li>
-                <li class="nav-item" role="presentation">
-                    <a class="nav-link" id="contact-tab" data-bs-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Contact</a>
-                </li>
             </ul>
             <div class="tab-content" id="myTabContent">
 
@@ -103,7 +97,7 @@ include '../config/conexao.php';
                 ?>
 
                 <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                    <table class="table">
+                    <table class="table table-sm w-100">
                         <thead>
                             <tr>
                                 <th scope="col">ID</th>
@@ -122,16 +116,15 @@ include '../config/conexao.php';
                                     <td><?php echo $rowCli[2] ?></td>
                                     <td><?php echo $rowCli[3] ?></td>
                                     <td>
-                                        <div style="max-width: 200px; float:right;">
-
-                                            <?php include 'include/modal-editar.php';
-                                            include 'include/modal-doc.php';
-                                            ?>
-
-                                            <a class="btn btn-danger" href="include/excluir.php?idcli=<?php echo $rowCli[0] ?>">X</a>
-                                            <button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#modalEditar<?php echo $rowCli[0]?>">E</button>
-                                            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalDoc<?php echo $rowCli[0]?>">DOC</button>
-                                        </div>
+										<?php
+										include 'include/modal-editar.php';
+										include 'include/modal-doc.php';
+										?>
+										<div class='w-100 text-end'>
+											<a class="btn btn-danger btn-sm font-12" href="include/excluir.php?idcli=<?php echo $rowCli[0] ?>">EXCLUIR</a>
+											<button class="btn btn-warning btn-sm font-12" data-bs-toggle="modal" data-bs-target="#modalEditar<?php echo $rowCli[0]?>">EDITAR</button>
+											<button class="btn btn-primary btn-sm font-12" data-bs-toggle="modal" data-bs-target="#modalDoc<?php echo $rowCli[0]?>">DOCUMENTOS</button>
+										</div>
                                     </td>
 
                                 </tr>
