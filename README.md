@@ -1,4 +1,4 @@
-# crud--com-modal
+# crud-com-modal
 Esse é apenas um crud simples para estudo utilizando de janelas modal do bootstrap e PHP
 
 Nele podemos realizar login > Cadastrar / Editar / Excluir clientes e cadastrar documentos para esse cliente. 
